@@ -66,7 +66,7 @@ public class PersonaRest {
 	}
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.PUT, consumes="application/json")
-	public @ResponseBody RespuestaRest modificarPersona(@RequestBody Persona p, @PathVariable Integer id) {
+	public @ResponseBody RespuestaRest modificarPersona(@RequestBody Persona p, @PathVariable Long id) {
 		RespuestaRest respuesta = new RespuestaRest();
 		try {
 			respuesta.setStatus(RespuestaRest.Status.SUCCESS);

@@ -17,8 +17,8 @@ public class Persona implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(unique=true, nullable=false)
-	private Integer id;
+	@Column(nullable=false)
+	private Long id;
 
 	@Column(nullable=false, length=50)
 	private String apellido;
@@ -32,11 +32,11 @@ public class Persona implements Serializable {
 	public Persona() {
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return this.id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
